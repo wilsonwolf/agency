@@ -28,7 +28,7 @@ class APIClient:
             if response.status_code >= 400:
                 try:
                     error_detail = response.json().get("detail", response.text)
-                except:
+                except Exception:
                     error_detail = response.text
                 raise APIError(f"API error: {error_detail}", response.status_code)
             return response.json() if response.content else None

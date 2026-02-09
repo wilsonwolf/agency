@@ -547,7 +547,7 @@ def is_first_session():
     try:
         data = json.loads(feature_list.read_text())
         return len(data.get("features", [])) == 0
-    except:
+    except Exception:
         return True
 
 def get_pending_features():
@@ -555,7 +555,7 @@ def get_pending_features():
     try:
         data = json.loads(feature_list.read_text())
         return [f for f in data.get("features", []) if f.get("status") == "pending"]
-    except:
+    except Exception:
         return []
 
 def load_progress():

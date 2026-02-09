@@ -1,8 +1,12 @@
-# AgentCtl - Deployment Guide
+# Agency - agentctl Server Deployment Guide
+
+> **Note:** This guide covers deploying the `agentctl` master server on GCP.
+> For the simpler standalone tool (`agency-quickdeploy`) which requires **no server**,
+> see the [README](../../README.md) or [CLAUDE.md](../../CLAUDE.md).
 
 ## Overview
 
-This guide covers deploying AgentCtl from scratch on a fresh GCP project.
+This guide covers deploying the agentctl master server from scratch on a fresh GCP project.
 
 ## Prerequisites
 
@@ -58,13 +62,10 @@ gcloud config set project existing-project-id
 ### Step 3: Install AgentCtl
 
 ```bash
-# From PyPI (when published)
-pip install agentctl
-
-# Or from source
-git clone https://github.com/yourusername/agentctl
-cd agentctl
-pip install -e .
+# From source
+git clone https://github.com/wesleyzhao/agency
+cd agency
+pip install -e ".[server]"
 ```
 
 ### Step 4: Initialize AgentCtl
@@ -98,9 +99,6 @@ This interactive command will:
 ### Step 5: Verify Installation
 
 ```bash
-# Check server status
-agentctl server status
-
 # List agents (should be empty)
 agentctl list
 
@@ -196,7 +194,7 @@ gcloud compute instances create agentctl-master \
     --service-account=agentctl-master@${PROJECT_ID}.iam.gserviceaccount.com \
     --scopes=cloud-platform \
     --tags=http-server,https-server \
-    --metadata-from-file=startup-script=scripts/master-startup.sh
+    --metadata-from-file=startup-script=scripts/setup-gcp.sh
 
 # Allow HTTP traffic
 gcloud compute firewall-rules create allow-agentctl \

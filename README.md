@@ -372,8 +372,8 @@ python -m pytest --cov=agency_quickdeploy --cov=agentctl
 |----------|---------|
 | [CLAUDE.md](CLAUDE.md) | Technical reference (for developers & AI agents) |
 | [BACKLOG.md](BACKLOG.md) | Known issues and planned work |
-| [docs/deployment/](docs/deployment/) | Detailed deployment guides |
-| [docs/api/API.md](docs/api/API.md) | REST API reference |
+| [docs/](docs/) | Full documentation index |
+| [docs/api/API.md](docs/api/API.md) | REST API reference (agentctl server) |
 
 ---
 

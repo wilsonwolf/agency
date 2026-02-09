@@ -1,4 +1,8 @@
-# Security Policy
+# Security Model - agentctl Server Architecture
+
+> **Scope:** This document describes the security model for `agentctl` (master server architecture).
+> The standalone `agency-quickdeploy` tool passes credentials directly via provider-specific
+> mechanisms (VM metadata, container env vars). See [CLAUDE.md](../../CLAUDE.md) for details.
 
 ## Security Model
 
@@ -187,7 +191,7 @@ The network sandbox limits what a malicious agent can do, but code review is sti
 
 **Do NOT open public GitHub issues for security vulnerabilities.**
 
-Instead, email the maintainers directly at: [security@your-domain.com]
+Instead, contact the maintainers via [GitHub Issues](https://github.com/wesleyzhao/agency/issues) (use a private vulnerability report if available).
 
 Include:
 - Description of the vulnerability

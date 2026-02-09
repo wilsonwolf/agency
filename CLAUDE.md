@@ -7,7 +7,7 @@ Comprehensive reference for developers and Claude Code agents working on this co
 ```bash
 # Install and test
 pip install -e ".[server,dev]"
-python -m pytest                    # Run all 164+ tests
+python -m pytest                    # Run all tests
 
 # Key files to understand
 agency_quickdeploy/cli.py          # Main CLI entry point
@@ -434,12 +434,13 @@ See `BACKLOG.md` for full list. Key issues:
 | `CLAUDE.md` | This file - developer/agent reference |
 | `BACKLOG.md` | Known issues and planned work |
 | `CONTRIBUTING.md` | Contribution guidelines |
-| `docs/api/API.md` | REST API specification |
-| `docs/cli/COMMANDS.md` | Detailed CLI reference |
-| `docs/deployment/DEPLOYMENT.md` | GCP setup guide |
-| `docs/deployment/SECURITY.md` | Security model |
-| `docs/architecture/` | Architecture docs |
-| `docs/archive/` | Historical planning docs |
+| `docs/README.md` | Documentation navigation guide |
+| `docs/api/API.md` | REST API for agentctl server |
+| `docs/cli/COMMANDS.md` | CLI reference (both agency-quickdeploy and agentctl) |
+| `docs/deployment/DEPLOYMENT.md` | agentctl server deployment on GCP |
+| `docs/deployment/SECURITY.md` | Security model (agentctl server architecture) |
+| `docs/architecture/` | Historical design docs (PRD, tech spec, review) |
+| `docs/archive/` | Early implementation plans and progress tracking |
 
 ---
 
